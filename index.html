@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atlas Fit – Salle de sport à Alger</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap">
+ <a class="logo" href="#top">Atlas<b>Fit</b></a>
+ <button id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+ <nav id="nav">
+  <a href="#cours">Cours</a><a href="#tarifs">Tarifs</a><a href="#imc">Calcul IMC</a><a href="#contact">Contact</a>
+  <a class="btn" href="#contact">Essai gratuit</a>
+ </nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+ <div>
+  <h1>Ton corps,<span>ton rythme.</span></h1>
+  <p>Musculation, cardio, CrossFit et cours collectifs à Alger. Coachs diplômés, matériel neuf, ouvert 7j/7.</p>
+  <div class="cta"><a class="btn" href="#contact">Réserver une séance d’essai</a><a class="btn alt" href="#tarifs">Voir les tarifs</a></div>
+ </div>
+ <svg viewBox="0 0 400 300" role="img" aria-label="Illustration d’une barre avec disques de musculation">
+  <rect x="20" y="40" width="360" height="220" rx="10" fill="var(--ink)"/>
+  <circle cx="330" cy="90" r="46" fill="var(--blue)" opacity=".9"/>
+  <rect x="40" y="145" width="320" height="12" rx="6" fill="#aab2bd"/>
+  <rect x="70" y="95" width="26" height="112" rx="5" fill="var(--orange)"/>
+  <rect x="100" y="110" width="20" height="82" rx="4" fill="#fff"/>
+  <rect x="280" y="110" width="20" height="82" rx="4" fill="#fff"/>
+  <rect x="304" y="95" width="26" height="112" rx="5" fill="var(--orange)"/>
+  <text x="40" y="238" fill="#fff" font-family="Big Shoulders Display,Impact,sans-serif" font-size="30" font-weight="900">+120 KG · NOUVEAU RECORD</text>
+ </svg>
+</div>
+<div class="wrap stats">
+ <div><strong data-n="1200">0</strong><span>membres actifs</span></div>
+ <div><strong data-n="18">0</strong><span>coachs diplômés</span></div>
+ <div><strong data-n="40">0</strong><span>cours par semaine</span></div>
+</div></div>
+
+<section id="cours"><div class="wrap">
+ <h2>Nos cours</h2>
+ <p class="sub">Choisis ta discipline. Tous les niveaux sont acceptés, du débutant au compétiteur.</p>
+ <div class="filters" id="filters">
+  <button aria-pressed="true" data-f="all">Tous</button><button aria-pressed="false" data-f="force">Force</button><button aria-pressed="false" data-f="cardio">Cardio</button><button aria-pressed="false" data-f="detente">Détente</button>
+ </div>
+ <div class="grid" id="classes"></div>
+</div></section>
+
+<section id="tarifs"><div class="wrap">
+ <h2>Tarifs</h2>
+ <p class="sub">Sans frais d’inscription. Résiliable à tout moment.</p>
+ <div class="tabs" id="billing">
+  <button aria-pressed="true" data-m="1">Mensuel</button><button aria-pressed="false" data-m="0">Annuel (−20 %)</button>
+ </div>
+ <div class="grid" id="plans"></div>
+</div></section>
+
+<section id="imc"><div class="wrap two">
+ <div>
+  <h2>Calcule ton IMC</h2>
+  <p class="sub">Un repère simple pour définir ton objectif avec nos coachs. Ce n’est pas un avis médical.</p>
+ </div>
+ <div class="box">
+  <div class="row">
+   <div><label for="poids">Poids (kg)</label><input id="poids" type="number" min="30" max="250" value="70"></div>
+   <div><label for="taille">Taille (cm)</label><input id="taille" type="number" min="120" max="230" value="175"></div>
+  </div>
+  <button class="btn" id="calc" style="margin-top:16px">Calculer</button>
+  <p class="out" id="imcOut" aria-live="polite"></p>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap two">
+ <div>
+  <h2>Essai gratuit</h2>
+  <p class="sub">Laisse tes coordonnées, on te rappelle sous 24 h pour fixer ta première séance.</p>
+  <p><strong>Adresse :</strong> 12 rue Didouche Mourad, Alger<br><strong>Horaires :</strong> 6h – 23h, 7j/7<br><strong>Tél :</strong> 0555 00 00 00</p>
+ </div>
+ <form class="box" id="form" novalidate>
+  <label for="nom">Nom complet</label><input id="nom" autocomplete="name">
+  <label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel" placeholder="0555 12 34 56">
+  <label for="obj">Ton objectif</label>
+  <select id="obj"><option>Perdre du poids</option><option>Prendre du muscle</option><option>Améliorer mon cardio</option><option>Me remettre en forme</option></select>
+  <button class="btn" type="submit" style="margin-top:18px">Réserver mon essai</button>
+  <p class="msg" id="msg" aria-live="polite"></p>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Atlas Fit, Alger</span><span>Instagram · Facebook · TikTok : @atlasfit.dz</span></div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
